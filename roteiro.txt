@@ -1,0 +1,74 @@
+
+
+1: metamask
+1.1: Instalar a extensão do metamask no chrome
+1.2: Criar conta 
+
+2: Criar rede privada ethereum no azure
+
+2.1: Ir ao http://portal.azure.com
+2.2: Create a resource
+2.3: Ethereum on Azure 
+
+Passo 1: 
+
+2.4: VM User name: VMAdmin
+2.5: Password: VMAdmin@12345
+2.6: Create a new resource group: Blockchain
+2.7: Region East US
+VMAdmin@12345
+Passo 2:
+
+2.8: First Region: East US
+
+Passo 3:
+
+2.9: Mudar o tamanho das VMs dos nos de validação para D1 v2
+
+Passo 4:
+
+2.10: Consortium Member Id = 0
+2.11: Colar o endereço da conta criada pelo metamask
+
+Passo 5:
+
+Monitoring Location: East US
+
+3: truffle
+
+3.1: run cmd install with admin rights
+3.2: npm install -g truffle
+3.2: npm install -g ganache-cli
+3.3: npm install -g windows-build-tools
+3.4: npm install -g node-gyp
+3.5: set npm_config_node_gyp=%appdata%\npm\node_modules\node-gyp\bin\node-gyp.js
+3.6: md your_project_name
+3.7: cd your_project_name
+3.8: npm init -y
+3.9: npm install truffle-hdwallet-provider -s
+3.10: truffle init
+3.11: code your solidity contract
+3.12: configure your 2_deploy_contract.js file
+3.13: configure your truffle-config.js file including the section:
+poa: {
+provider: () => new HDWalletProvider(mnemonic, your rpc endpoint),
+network_id: 10101010, // This network is yours, in the cloud.
+gasPrice: 0
+}
+
+3.14: uncomment these lines in the top of config file
+const HDWalletProvider = require('truffle-hdwallet-provider');
+const fs = require('fs');
+const mnemonic = fs.readFileSync(".secret").toString().trim();
+
+3.15: Create a .secret file in your root project directory including your wallet mnemonic
+3.16: truffle compile
+3.17: truffle migrate --network poa
+
+
+##################################
+alocar ether nos nós via parity
+
+habilitar SSH no portal do azure
+Resource Group -> Network Security Group -> Overview -> allow SSL
+ssh -p 4000 VMAdmin@ethvwtxwa-dns-reg1.brazilsouth.cloudapp.azure.com

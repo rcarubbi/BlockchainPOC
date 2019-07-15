@@ -1,0 +1,45 @@
+Metamask ao inves de ethereum wallet uma vez que a mesma foi descontinuada
+Senha Metamask Raphakf0612
+space avoid network where winner certain project embrace sword mad square loan
+
+node -> blocks -> transactions 
+
+transaction types:
+contract creations
+method calls
+ether transfer
+
+node types:
+full node: copia completa da blockchain, verifica transactions, nao recebe recompensa
+miner node: executa transactions, gera blocks, recebe recompensa
+light client: so processa algumas transactions, confia nos full nodes pra validação
+
+
+
+transactions mudam o estado da rede, custam ether e levam tempo para serem processados
+calls: nao mudam o estado da rede, gratuitas e rapidas, apenas funções view e pure podem ser chamadas
+
+remover contratcs:
+
+selfdestruct method impede novas chamadas ao contract
+custa gas negativo porque libera recursos da rede
+ex: selfdestruct(endereco_do_contract)
+selfdesctruct(0x0) queima os fundos remanescentes no contract
+
+tipos de rede:
+publicas (main e testnets)
+consortium 
+privadas
+
+tipos de algoritmos de concensos: 
+Proof of work - todos podem tentar e quem tem mais poder computacional tem mais chance de acertar o nonce
+Passivel de ataque de 51%
+Proof of Stake - quem tem maior percentual de moedas é selecionado pelo algoritmo para validar o block acertando o nonce
+Quem tem 51% da moeda tem interesse em preservar o sistema?
+Proof of Authority - não existe mineração, nós assinados por autoridades conhecidas são responsáveis 
+por validar e emitir os blocos a maioria dos nós tem que assinar um bloco para ele se tornar válido
+
+Ethereum Clients:
+Parity
+Geth
+infura node na nuvem gratuito

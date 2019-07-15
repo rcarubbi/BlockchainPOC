@@ -1,0 +1,25 @@
+Checklist
+
+ALWAYS
+
+[x] instalar o truffle
+[x] instalar o truffle-hdwallet-provider
+[x] criar novo projeto de DAPPs com truffle
+[x] escrever codigo do smart contract
+[x] configurar deploy
+
+PROD 
+
+[X] Configurar a rede no azure (criar rede, habilitar SSH, linkar na conta do meta mask)
+[X] baixar, instalar e associar o metamask
+[X] Deploy dos smart contracts com truffle (erro ao tentar dar deploy no Migrations contract)
+
+DEV
+[x] instalar o ganache-cli
+[x] realizar o deploy em uma rede ganache
+[x] recuperar o smart contract via truffle console conectado no ganache   
+[x] chamar os metodos do smart contract via truffle console conectado no ganache
+[x] trocar de rede no truffle config
+
+FRONT-END
+[x] implementar script javascript com web3
